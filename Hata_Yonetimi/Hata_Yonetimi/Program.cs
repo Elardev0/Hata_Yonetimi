@@ -48,6 +48,21 @@ namespace Hata_Yonetimi
 				Console.WriteLine("İşlem tamamlandı.");
             }
             
+
+			//---------------------------------------------------------------
+			//  IF ELSE Karar yapıları...
+
+			int time = DateTime.Now.Hour;
+            if (time >= 6 && time< 11)
+				Console.WriteLine("Günaydın");
+			else if (time <= 18)
+				Console.WriteLine("İyi Günler");
+			else
+				Console.WriteLine("İyi Geceler");
+			string sonuc = time <= 11 ? "İyi Günler!" : "İyi Geceler!";
+			sonuc = time>6 && time < 11 ? "Günaydın" : time <= 18 ? "İyi Günler" : "İyi Geceler";
+            Console.WriteLine(sonuc);
+
         }
     }
 }
